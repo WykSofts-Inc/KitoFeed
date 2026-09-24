@@ -1,5 +1,7 @@
 # KitoFeed
 
+**[Documentation](https://wyksofts-inc.github.io/KitoFeed/documentation/kitofeed/)**
+
 Social feeds and comments for SwiftUI: posts in four styles with tappable @mentions, #hashtags and
 links, photo grids, video posters, link cards and polls; a like button that bursts; a feed with pull
 to refresh, a "New posts" pill, endless loading and a compose button; threaded comments with
