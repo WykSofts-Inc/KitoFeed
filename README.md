@@ -56,7 +56,7 @@ Report; each folds the post into a note with Undo.
 ## Rich text
 
 ```swift
-KitoRichText("Lunch with @amani at kito.dev #nairobi", lineLimit: 3,
+KitoRichText("Lunch with @amani at example.com #nairobi", lineLimit: 3,
              onMention: { openProfile($0) }, onHashtag: { openTag($0) })
 
 KitoRichTextParser.tokens(in: text)      // text, mention, hashtag and link runs
@@ -69,9 +69,8 @@ not a hashtag, and trailing punctuation stays out of links.
 ## Comments
 
 ```swift
-KitoCommentsView(comments: $comments, currentUser: me, people: following) { comment, parentID in
-    api.add(comment, replyingTo: parentID)
-} header: {
+KitoCommentsView(comments: $comments, currentUser: me, people: following,
+                 onSend: { comment, parentID in api.add(comment, replyingTo: parentID) }) {
     KitoFeedPostView(post: $post, style: .minimal)
 }
 ```

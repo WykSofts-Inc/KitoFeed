@@ -13,9 +13,9 @@ import KitoCore
 /// Reply and pinned comments first.
 ///
 /// ```swift
-/// KitoCommentThread(comments: $comments) { comment in
+/// KitoCommentThread(comments: $comments, onReply: { comment in
 ///     draft = "@\(comment.author.handle) "      // or use KitoCommentsView, which does this for you
-/// }
+/// })
 /// ```
 public struct KitoCommentThread: View {
     @Binding private var comments: [KitoFeedComment]
