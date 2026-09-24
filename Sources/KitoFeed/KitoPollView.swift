@@ -88,7 +88,7 @@ public struct KitoPollView: View {
                     .transition(.scale.combined(with: .opacity))
             }
             Spacer(minLength: theme.spacing.sm)
-            Text("\(shown)%")
+            Text(Double(shown) / 100, format: .percent)
                 .font(theme.typography.label.weight(isLeader ? .bold : .medium).monospacedDigit())
                 .foregroundStyle(theme.colors.onSurface)
                 .contentTransition(.numericText(value: Double(shown)))

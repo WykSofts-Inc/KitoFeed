@@ -121,6 +121,13 @@ KitoFeedFormat.compactCount(1_240)        // "1.2K"
 KitoFeedFormat.timeLeft(until: endsAt)    // "2h left"
 ```
 
+## Right-to-left
+
+Posts, comments, photo grids, polls and the composer mirror with the layout direction (poll bars
+grow from the leading edge; the shimmer sweeps leading to trailing). Poll percentages are formatted
+with the environment locale, and the comment Reply symbol points the reading way. There are no
+horizontal drag gestures to adjust.
+
 ## Installation
 
 ```swift

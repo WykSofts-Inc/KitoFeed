@@ -185,7 +185,7 @@ struct KitoCommentRowView: View {
         .padding(.leading, theme.spacing.lg)
         .contentShape(Rectangle())
         .contextMenu {
-            Button("Reply", systemImage: "arrowshape.turn.up.left", action: onReply)
+            Button("Reply", systemImage: "arrowshape.turn.up.backward", action: onReply)
             Button("Copy text", systemImage: "doc.on.doc") { UIPasteboard.general.string = comment.text }
         }
         .accessibilityElement(children: .combine)
